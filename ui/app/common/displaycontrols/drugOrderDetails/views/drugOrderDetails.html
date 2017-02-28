@@ -34,6 +34,18 @@
                     <span>{{::drugOrder.additionalInstructions || ""}}</span>
                 </td>
 
+                <td>
+                    <span>{{::drugOrder.quantity}} </span><span>{{::drugOrder.quantityUnit}}</span>
+                </td>
+
+                <td>
+                    <span>{{::drugOrder.dateStopped}}</span>
+                </td>
+
+                <td>
+                    <span>{{::drugOrder.orderReasonText}}</span>
+                </td>
+
                 <td class="toggle-btn"
                     ng-if="::section.dashboardConfig.showDetailsButton">
                     <button class="toggle fr" toggle="drugOrder.showDetails">
@@ -50,6 +62,7 @@
                                         provider-name="{{::drugOrder.provider.name}}"
                                         provider-date="::drugOrder.effectiveStartDate"></provider-directive>
                 </span>
+                        <span>{{drugOrder}}</span>
                     </div>
                 </td>
             </tr>
