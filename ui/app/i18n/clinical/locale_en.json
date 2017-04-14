@@ -179,5 +179,6 @@
 
     "OBS_BOOLEAN_YES_KEY":"Yes",
     "OBS_BOOLEAN_NO_KEY":"No",
-    "CLINICAL_DUPLICATE_DIAGNOSIS_ERROR_MESSAGE" : "Please correct the duplicate diagnosis entered."
+    "CLINICAL_DUPLICATE_DIAGNOSIS_ERROR_MESSAGE" : "Please correct the duplicate diagnosis entered.",
+    "HAVE_SMEAR_RESULTS_BUT_NO_CULTURE": "Have smear results but no culture"
 }

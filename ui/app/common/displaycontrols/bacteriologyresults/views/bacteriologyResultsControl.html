@@ -10,8 +10,20 @@
                         <span class="specimenSource toggle-container"   toggle="specimen.isOpen">
                             <i class="fa fa-caret-right"></i>
                             <i class="fa fa-caret-down"></i>
-                            {{getDisplayName(specimen)}} :
-                            <span class="specimenId">{{specimen.specimenId}}</span>
+                            {{getDisplayName(specimen)}} : {{daysDiffThreshold}}
+                            <span ng-show="!hasResults(specimen.sampleResult)">
+                                    <span class="specimenId">{{specimen.specimenId}}</span>
+                            </span>
+                            <span ng-else="hasResults(specimen.sampleResult)">
+                                <span ng-repeat="step in specimen.sampleResult.groupMembers[0]">
+                                        <div ng-if="diffDays[specimen.specimenId]>60 && step.shortName == 'Smear Microscopy Test Results'">
+                                            <span class="specimenId" title="Have smear results but no culture"><font color="red">{{specimen.specimenId}}</font></span>
+                                        </div>
+                                        <div ng-if="(step.shortName == 'Culture Results') || (step.shortName == 'Smear Microscopy Test Results' && diffDays[specimen.specimenId]<60)">
+                                         <span class="specimenId">{{specimen.specimenId}}</span>
+                                        </div>
+                                </span>
+                            </span>
                         </span>
 
                         <span class="specimenCollectionDate fr">
