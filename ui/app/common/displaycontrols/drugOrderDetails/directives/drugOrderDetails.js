@@ -27,7 +27,7 @@ angular.module('bahmni.common.displaycontrol.drugOrderDetails')
                 "DRUG_DETAILS_QUANTITY_TEXT",
                 "DRUG_DETAILS_STOP_DATE",
                 "DRUG_DETAILS_ORDER_REASON_CODED"
-                ];
+            ];
 
             $scope.showDetails = false;
             $scope.toggle = function (drugOrder) {
