@@ -36,14 +36,14 @@ angular.module('bahmni.common.displaycontrol.bacteriologyresults')
                         var specimenMapper = new Bahmni.Clinical.SpecimenMapper();
                         var conceptsConfig = appService.getAppDescriptor().getConfigValue("conceptSetUI") || {};
                         var dontSortByObsDateTime = true;
-                       _.forEach($scope.observations, function (observation) {
+                        _.forEach($scope.observations, function (observation) {
                             var oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
                             var firstDate = new Date(observation.dateCollected);
                             var secondDate = new Date();
                             $scope.specimens.push(specimenMapper.mapObservationToSpecimen(observation, $scope.allSamples, conceptsConfig, dontSortByObsDateTime));
                             $scope.data[observation.identifier] = Math.round(Math.abs((firstDate.getTime() - secondDate.getTime()) / (oneDay)));
                             $scope.diffDays = $scope.data;
-                       });
+                        });
                     }
                 };
 

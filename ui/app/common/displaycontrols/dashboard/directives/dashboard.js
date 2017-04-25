@@ -11,9 +11,9 @@ angular.module('bahmni.common.displaycontrol.dashboard')
             var checkDisplayType = function (sections, typeToCheck, index) {
                 return sections[index] && sections[index]['displayType'] && sections[index]['displayType'] === typeToCheck;
             };
-             var checkDisplayType = function (sections, typeToCheck, index) {
-                            return sections[index] && sections[index]['displayType'] && sections[index]['displayType'] === typeToCheck;
-                        };
+            var checkDisplayType = function (sections, typeToCheck, index) {
+                return sections[index] && sections[index]['displayType'] && sections[index]['displayType'] === typeToCheck;
+            };
 
             var isDisplayTypeWrong = function (sections) {
                 var allDisplayTypes = ['Full-Page', 'LAYOUT_75_25', 'LAYOUT_25_75', 'Half-Page'];
