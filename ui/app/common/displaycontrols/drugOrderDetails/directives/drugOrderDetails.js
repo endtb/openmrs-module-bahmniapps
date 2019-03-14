@@ -23,12 +23,13 @@ angular.module('bahmni.common.displaycontrol.drugOrderDetails')
             $scope.columnHeaders = [
                 "DRUG_DETAILS_DRUG_NAME",
                 "DRUG_DETAILS_DOSE_INFO",
-                "DRUG_DETAILS_QUANTITY_TEXT",
                 "DRUG_DETAILS_ROUTE",
                 "DRUG_DETAILS_FREQUENCY",
                 "DRUG_DETAILS_START_DATE",
-                "DRUG_DETAILS_INSTRUCTIONS_TEXT",
-                "DRUG_DETAILS_ADDITIONAL_INSTRUCTIONS"
+                "DRUG_DETAILS_ADDITIONAL_INSTRUCTIONS",
+                "DRUG_DETAILS_QUANTITY_TEXT",
+                "DRUG_DETAILS_STOP_DATE",
+                "DRUG_DETAILS_ORDER_REASON_CODED"
             ];
 
             $scope.showDetails = false;
